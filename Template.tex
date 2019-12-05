@@ -1,0 +1,125 @@
+\newcommand\slideColor{Black}
+\include{preamble}
+
+\title
+{TITLE HERE}
+
+\subtitle
+{SUBTITLE}
+
+\author[Samuel de Jong]
+{Samuel ~de Jong}
+
+%uncomment for meetings with mike
+%\institute[University of Victoria]
+
+
+\date
+{DATE}
+
+\subject{SUBJECT}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\newcommand*\oldmacro{}%
+\let\oldmacro\insertshorttitle%
+\renewcommand*\insertshorttitle{%
+\vspace{-0.05cm}
+\includegraphics[height=0.25cm]{/hepuser/srdejong/Pictures/ATLAS_logo_small_white.pdf}
+%\includegraphics[height=0.25cm]{/hepuser/srdejong/Pictures/belle2-logo.pdf}
+\hspace{0.15cm}
+\oldmacro%
+\hspace{0.15cm}
+\includegraphics[height=0.25cm]{/hepuser/srdejong/Pictures/UVic_Shield}
+%\hfill
+}
+
+%\begin{frame}{Outline}
+
+  %\tableofcontents
+  % You might wish to add the option [pausesections]
+%\end{frame}
+
+%START OF TALK
+
+\section{Introduction}
+
+
+\begin{frame}{Introduction}
+
+\end{frame}
+
+\note{
+  A note on the intro
+}
+
+\section{discussion}
+
+\begin{frame}{body of talk}
+
+
+\begin{columns}
+\column{2in}
+\centering
+\begin{figure}
+	%\includegraphics[height=1.25in]{\PDFdir NoShield/HitLocations_ProdVert}
+\end{figure}
+
+\begin{figure}
+	%\includegraphics[height=1.25in]{\PDFdir NoShield/Neutron_Flux}
+\end{figure}
+
+
+\column{2in}
+\centering
+\begin{figure}
+	%\includegraphics[height=1.25in]{\PDFdir NoShield/Crystal_Rad_Dose}
+\end{figure}
+
+\begin{figure}
+	%\includegraphics[height=1.25in]{\PNGdir NoShield/Forward_Schematic}
+\end{figure}
+
+\end{columns}
+
+
+\end{frame}
+
+
+
+\section{Conclusion}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+	\item
+	the end
+
+\end{itemize}
+\end{frame}
+
+\appendix
+\backupbegin
+%Backup slides here
+
+\begin{frame}
+\begin{center}
+\Huge Backup slides
+\end{center}
+\end{frame}
+
+\begin{frame}{Backup Slide}
+\begin{itemize}
+	\item
+	Not counted in page count
+
+\end{itemize}
+\end{frame}
+
+\backupend
+
+\end{document}

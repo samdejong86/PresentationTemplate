@@ -1,0 +1,62 @@
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+
+\usepackage{textcomp}
+
+\definecolor{dgreen}{rgb}{0.,0.6,0.}
+
+\newcommand\defaultfon{\fontsize{11pt}{12}\selectfont}
+\newcommand\smallfon{\fontsize{10pt}{12}\selectfont}
+\newcommand\smallfontwo{\fontsize{8pt}{12}\selectfont}
+\newcommand\smallfonthree{\fontsize{6pt}{12}\selectfont}
+\newcommand\smallfonfour{\fontsize{6pt}{8}\selectfont}
+\newcommand{\putat}[3]{\begin{picture}(0,0)(0,0)\put(#1,#2){#3}\end{picture}}
+
+\newcommand\PDFdir{/hepuser/srdejong/Pictures/PDF/}
+\newcommand\PNGdir{/hepuser/srdejong/Pictures/PNG/}
+
+\newcommand\up{$\uparrow$}
+\newcommand\down{$\downarrow$}
+
+
+
+%To remove backup slides from count
+\newcommand{\backupbegin}{
+   \newcounter{finalframe}
+   \setcounter{finalframe}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \setcounter{framenumber}{\value{finalframe}}
+}
+
+\mode<presentation>
+{
+  \usecolortheme[named=\slideColor]{structure}
+  \usetheme{Madrid}
+
+  
+  \setbeamertemplate{navigation symbols}{} %remove navigation symbols
+}
+
+\institute[University of Victoria] 
+{
+\includegraphics[height=0.5in]{/hepuser/srdejong/Pictures/ATLAS_logo}\hspace{0.5cm}\includegraphics[height=0.5in]{/hepuser/srdejong/Pictures/UVic_Logo}
+ 
+  Department of Physics and Astronomy\\
+  University of Victoria
+}
+
+\author[Samuel de Jong] 
+{Samuel ~de Jong}
+
+
