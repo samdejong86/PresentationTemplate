@@ -1,11 +1,12 @@
 
 TEX = pdflatex
-#-interaction nonstopmode
+VIEWER = evince
+EDITOR = gedit
 
 MAIN = Template
 SLIDES = $(MAIN)_slides
 NOTES = $(MAIN)_notes
-VIEWER = evince
+
 
 all: $(SLIDES).pdf $(NOTES).pdf
 
@@ -18,6 +19,9 @@ clean_junk::
 view:  $(NOTES).pdf $(SLIDES).pdf
 	$(VIEWER) $(SLIDES).pdf >> /dev/null 2>&1 &
 	$(VIEWER) $(NOTES).pdf >> /dev/null 2>&1 &
+
+edit:
+	$(EDITOR) $(MAIN).tex
 
 $(SLIDES).pdf: $(SLIDES).tex $(MAIN).tex
 	$(TEX) $(SLIDES).tex
