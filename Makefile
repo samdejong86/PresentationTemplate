@@ -12,24 +12,24 @@ HANDOUT = $(MAIN)_handout
 all: $(SLIDES).pdf
 
 clean:
-	rm -fv *.aux *.log *.bbl *.blg *.toc *.out *.lot *.lof *.glo *.nav *.snm *.ist *.vrb $(SLIDES).pdf $(NOTES).pdf $(HANDOUT).pdf
+	@rm -fv *.aux *.log *.bbl *.blg *.toc *.out *.lot *.lof *.glo *.nav *.snm *.ist *.vrb $(SLIDES).pdf $(NOTES).pdf $(HANDOUT).pdf
 
 clean_junk:
-	rm -fv *.aux *.log *.bbl *.blg *.toc *.out *.lot *.lof *.glo *.nav *.snm *.ist *.vrb
+	@rm -fv *.aux *.log *.bbl *.blg *.toc *.out *.lot *.lof *.glo *.nav *.snm *.ist *.vrb
 
-view:  $(NOTES).pdf
-	$(VIEWER) $(SLIDES).pdf >> /dev/null 2>&1 &
+view:  $(SLIDES).pdf
+	@$(VIEWER) $(SLIDES).pdf >> /dev/null 2>&1 &
 
 view_notes: $(SLIDES).pdf
-	$(VIEWER) $(NOTES).pdf >> /dev/null 2>&1 &
+	@$(VIEWER) $(NOTES).pdf >> /dev/null 2>&1 &
 
 view_handout: $(HANDOUT).pdf
-	$(VIEWER) $(HANDOUT).pdf >> /dev/null 2>&1 &
+	@$(VIEWER) $(HANDOUT).pdf >> /dev/null 2>&1 &
 
 view_all: view view_notes view_handout
 
 edit:
-	$(EDITOR) $(MAIN).tex
+	@$(EDITOR) $(MAIN).tex >> /dev/null 2>&1 &
 
 $(SLIDES).pdf: $(SLIDES).tex $(MAIN).tex
 	$(TEX) $(SLIDES).tex
