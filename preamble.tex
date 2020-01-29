@@ -39,18 +39,41 @@
    \setcounter{framenumber}{\value{finalframe}}
 }
 
+
+
+
 \mode<presentation>
 {
   \usecolortheme[named=\slideColor]{structure}
-  \usetheme{Madrid}
+\usetheme{Madrid}
+%\useoutertheme{miniframes} % Alternatively: miniframes, infolines, split
+%\useinnertheme{circles}
+
+\definecolor{UVicDblue}{rgb}{0, 0.1797, 0.3633} % UBC Blue (primary)
+\definecolor{UVicBlue}{rgb}{0, 0.3672, 0.7186} % UBC Grey (secondary)
+\definecolor{UVicRed}{rgb}{0.8203, 0.1484, 0.1875} % UBC Grey (secondary)
+\definecolor{UVicYellow}{rgb}{0.9141, 0.6641, 0} % UBC Grey (secondary)
+
+\setbeamercolor{palette primary}{bg=UVicDblue,fg=white}
+\setbeamercolor{palette secondary}{bg=UVicDblue,fg=white}
+\setbeamercolor{palette tertiary}{bg=UVicBlue,fg=white}
+\setbeamercolor{palette quaternary}{bg=UVicDblue,fg=white}
+\setbeamercolor{structure}{fg=UVicDblue} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=UVicDblue} % TOC sections
+
+
+% Override palette coloring with secondary
+\setbeamercolor{subsection in head/foot}{bg=UVicRed,fg=white}
+
 
   
   \setbeamertemplate{navigation symbols}{} %remove navigation symbols
 }
 
+
 \institute[University of Victoria] 
 {
-\includegraphics[height=0.5in]{/hepuser/srdejong/Pictures/ATLAS_logo}\hspace{0.5cm}\includegraphics[height=0.5in]{/hepuser/srdejong/Pictures/UVic_Logo}
+\includegraphics[height=0.5in]{\collabImageLarge}\hspace{0.5cm}\includegraphics[height=0.5in]{/hepuser/srdejong/Pictures/UVic_Logo}
  
   Department of Physics and Astronomy\\
   University of Victoria
@@ -58,5 +81,10 @@
 
 \author[Samuel de Jong] 
 {Samuel ~de Jong}
+
+\usebackgroundtemplate%
+{%
+\includegraphics[width=\paperwidth]{/hepuser/srdejong/Pictures/uvictemplate}
+}
 
 
